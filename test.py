@@ -16,9 +16,9 @@ class Solution(object):
         carry = 0
         r = p
         while p and q:
-            _sum = p.val + q.val + carry
-            p.val = _sum % 10
-            carry = _sum / 10
+            mysum = p.val + q.val + carry
+            p.val = mysum % 10
+            carry = mysum / 10
             if not p.next:
                 r = p
             p, q = p.next, q.next
@@ -27,13 +27,13 @@ class Solution(object):
             r.next = q
             p = q
         while p:
-            _sum = p.val + carry
-            p.val = _sum % 10
-            carry = _sum / 10
+            mysum = p.val + carry
+            p.val = mysum % 10
+            carry = mysum / 10
             if not p.next:
                 r = p
             p = p.next
-            if _sum < 10:
+            if mysum < 10:
                 break
         if carry > 0:
             r.next = ListNode(carry)
