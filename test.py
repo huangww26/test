@@ -61,4 +61,9 @@ class Solution(object):
             p = p.next
 
         return dummy.next
+    def helper(self):
+        a = []
+        for _ in range(1000):
+            a.append('*')
+        print a[0]
 # ---------------------------------------------------------------------- 
